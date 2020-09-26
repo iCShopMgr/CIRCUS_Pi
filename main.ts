@@ -1025,7 +1025,7 @@ namespace circuspi {
     //% miso.defl=DigitalPin.P14
     //% sck.defl=DigitalPin.P13
     //% group="5. Lirbraries"
-    //% weight=78
+    //% weight=68
     export function max7219set(cs: DigitalPin, mosi: DigitalPin, miso: DigitalPin, sck: DigitalPin): void {
         setup(1, cs, mosi, miso, sck)
     }
@@ -1035,7 +1035,7 @@ namespace circuspi {
     //% string.defl="text"
     //% time.defl=100
     //% group="5. Lirbraries"
-    //% weight=77
+    //% weight=67
     export function max7219Text(string: string, pos:number, time: number): void {
         let _text = string
         let _out = []
@@ -1065,7 +1065,7 @@ namespace circuspi {
     //% string.defl="text"
     //% time.defl=100
     //% group="5. Lirbraries"
-    //% weight=76
+    //% weight=66
     export function max7219Scroll(string: string, time: number): void {
         let _text = string
         let _out = []
@@ -1108,7 +1108,7 @@ namespace circuspi {
     //% blockId="MAX7219_clear"
     //% block="MAX7219 clear"
     //% group="5. Lirbraries"
-    //% weight=75
+    //% weight=65
     export function max7219Clear(): void {
         clearAll()
     }
@@ -1120,7 +1120,7 @@ namespace circuspi {
     //% blockId="LCD_setAddress"
     //% block="LCD1602 I2C address %myAddr"
     //% group="5. Lirbraries"
-    //% weight=74 blockExternalInputs=true
+    //% weight=64 blockExternalInputs=true
     export function setAddress(myAddr: I2C_ADDR): void {
         LCD_I2C_ADDR = myAddr
         setI2CAddress()
@@ -1129,7 +1129,7 @@ namespace circuspi {
     //% blockId="LCD_clear"
     //% block="LCD clear"
     //% group="5. Lirbraries"
-    //% weight=73
+    //% weight=63
     export function clear(): void {
         setcmd(0x01)
     }
@@ -1137,7 +1137,7 @@ namespace circuspi {
     //% blockId="LCD_backlight"
     //% block="set LCD backlight %on"
     //% group="5. Lirbraries"
-    //% weight=72
+    //% weight=62
     export function set_backlight(on: SwState): void {
         if (on == 1)
             BK = 0x08
@@ -1149,7 +1149,7 @@ namespace circuspi {
     //% blockId="LCD_putString"
     //% block="LCD show string %s|on x:%x|y:%y"
     //% group="5. Lirbraries"
-    //% weight=71
+    //% weight=61
     //% x.min=0 x.max=15 y.min=0 y.max=1
     export function putString(s: string, x: number, y: number): void {
         if (s.length > 0) {
@@ -1168,7 +1168,7 @@ namespace circuspi {
     //% blockId="LCD_putNumber"
     //% block="LCD show number %n|on x:%x|y:%y"
     //% group="5. Lirbraries"
-    //% weight=70
+    //% weight=60
     //% x.min=0 x.max=15 y.min=0 y.max=1
     export function putNumber(n: number, x: number, y: number): void {
         putString(n.toString(),x,y)
