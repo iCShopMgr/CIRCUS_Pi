@@ -942,7 +942,7 @@ namespace circuspi {
     //% blockId="RGB_LED_show_all"
     //% block="All RGB LED show color %rgb"
     //% group="5. Lirbraries"
-    //% weight=83
+    //% weight=49
     export function rgbledshowall(rgb: number): void{
         let r = (rgb >> 16) * (_brightness / 255);
         let g = ((rgb >> 8) & 0xFF) * (_brightness / 255);
@@ -959,7 +959,7 @@ namespace circuspi {
     //% rgb.shadow="colorNumberPicker"
     //% blockId="RGB_LED_show"
     //% block="RGB LED number| %index show color| %rgb"
-    //% weight=82
+    //% weight=48
     export function rgb_led_show(index: number, rgb: number): void{
         let f = index;
         let t = index;
@@ -987,7 +987,7 @@ namespace circuspi {
     //% brightness.min=0 brightness.max=255
     //% blockId="RGB_LED_set_brightness"
     //% block="RGB LED set pins %di LED %ln brightness to |%brightness |(0~255)"
-    //% weight=81
+    //% weight=47
     export function rgb_led_set_setBrightness(di: DigitalPin, ln: number, brightness: number) {
         _brightness = brightness;
         _lednumber = ln
@@ -999,14 +999,14 @@ namespace circuspi {
     //% b.min=0 b.max=255
     //% blockId="RGB_LED_set_RGB"
     //% block="Red|%r Green|%g Blue|%b"
-    //& weight=80
+    //& weight=46
     export function rgb_led_set_RGB(r: number, g: number, b: number): number {
         return (r << 16) + (g << 8) + (b);
     }
 
     //% blockId="RGB_LED_clear"
     //% block="RGB LED clear all"
-    //% weight=79
+    //% weight=45
     export function rgb_led_clear(): void {
         for (let i = 0; i < 16 * _lednumber; i++) {
             neopixel_buf[i] = 0
