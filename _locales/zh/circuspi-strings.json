@@ -26,7 +26,7 @@
     "circuspi.rgb_led_set_setBrightness|block": "RGB LED燈環連接 %di 控制數量 %ln 調整亮度 |%brightness |(0~255)",
     "circuspi.rgb_led_set_RGB|block": "紅色|%r 綠色|%g 藍色|%b",
     "circuspi.rgb_led_clear|block": "關閉RGB LED燈環",
-    "circuspi.max7219set|block": "設定LED點矩陣顯示模組連接:|DIN(MOSI) = %mosi|CS(LOAD) = %cs|MISO(不用接) = %miso|CLK(SCK) = %sck",
+    "circuspi.max7219set|block": "設定LED點矩陣顯示模組連接:|DIN(MOSI) = %mosi|CS(LOAD) = %cs|MISO(空接) = %miso|CLK(SCK) = %sck",
     "circuspi.max7219Text|block": "LED點矩陣顯示文字 %string 位子 %pos 間隔時間 %time",
     "circuspi.max7219Scroll|block": "LED點矩陣顯示捲動文字 %string 捲動時間 %time",
     "circuspi.max7219Clear|block": "LED點矩陣清除顯示",
