@@ -771,6 +771,9 @@ namespace circuspi {
     //% blockId=traffic_lights
     //% block="Traffic lights:| Red%p1 set%s1| Yellow%p2 set%s2| Green%p3 set%s3"
     //% group="2. Digital out"
+	//% p1.defl=DigitalPin.P0
+    //% p2.defl=DigitalPin.P1
+    //% p3.defl=DigitalPin.P2
     //% weight=94
     export function trafficlights(p1: DigitalPin, s1: SwState, p2: DigitalPin, s2: SwState, p3: DigitalPin, s3: SwState): void {
         pins.digitalWritePin(p1, s1);
@@ -853,6 +856,9 @@ namespace circuspi {
     //% block="RGB LED:| Red%p1 set%s1| Green%p2 set%s2| Blue%p3 set%s3"
     //% group="4. Analog out(PWM)"
     //% weight=88
+	//% p1.defl=DigitalPin.P0
+    //% p2.defl=DigitalPin.P1
+    //% p3.defl=DigitalPin.P2
     //% s1.min=0 s1.max=1023 s2.min=0 s2.max=1023 s3.min=0 s3.max=1023
     //% s1.defl=1023 s2.defl=1023 s3.defl=1023
     export function rgbled(p1: AnalogPin, s1: number, p2: AnalogPin, s2: number, p3: AnalogPin, s3: number): void {
@@ -872,6 +878,10 @@ namespace circuspi {
     //% weight=87
     //% s1.min=0 s1.max=1023 s2.min=0 s2.max=1023 s3.min=0 s3.max=1023 s4.min=0 s4.max=1023
     //% s1.defl=0 s2.defl=1023 s3.defl=0 s4.defl=1023
+	//% p1.defl=DigitalPin.P13
+    //% p2.defl=DigitalPin.P14
+    //% p3.defl=DigitalPin.P15
+	//% p4.defl=DigitalPin.P16
     export function motor(p1: AnalogPin, s1: number, p2: AnalogPin, s2: number, p3: AnalogPin, s3: number, p4: AnalogPin, s4: number): void {
         pins.analogWritePin(p1, s1);
         pins.analogWritePin(p2, s2);
